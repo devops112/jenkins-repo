@@ -11,6 +11,7 @@ pipeline {
 		steps
 		{
 			echo "Build"
+			echo "PATH = $PATH"
 			sh 'maven --version'
 			sh 'docker version'
 			echo "all commands executed"
