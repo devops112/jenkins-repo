@@ -13,6 +13,7 @@ pipeline {
 			echo "Build"
 			echo "PATH = $PATH"
 			sh 'mvn --version'
+			sh 'sudo su'
 			sh 'docker version'
 			echo "all commands executed"
 			
