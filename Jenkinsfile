@@ -2,8 +2,8 @@ pipeline {
 	agent any
 	environment {
 		docker_home= tool 'my-docker'
-		maven-home=tool 'my-maven'
-		PATH="$docker_home/bin:maven-home/bin:$PATH"
+		maven_home=tool 'my-maven'
+		PATH="$docker_home/bin:maven_home/bin:$PATH"
 	}
 	stages
 	{
@@ -28,6 +28,8 @@ pipeline {
 		
 	}
 	}
+	
+	
 	post{
 
 		success{
