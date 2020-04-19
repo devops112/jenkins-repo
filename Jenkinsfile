@@ -7,6 +7,14 @@ pipeline {
 	}
 	stages
 	{
+	stage('Prebuild')
+	{
+		steps{
+			sh 'groupadd docker'
+			sh 'usermod -aG docker $USER'
+			sh 'chmod 777 /var/run/docker.sock'
+		}
+	}
 	stage('Build') {
 		steps
 		{
